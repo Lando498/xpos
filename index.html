@@ -11,20 +11,30 @@
 </div>
 </body>
 <footer style="display: flex; align-items: center;">
-    <div id="start">
+    <div id="start" style="background-image: linear-gradient( #656565, #2e2e2e);">
         <ul>
-            <li>
-                <button id="calculatorbutton">
-                    <img id="calcimg" src="calc.png">
-                </button>
+            <li style="display: flex; align-items: center;">
+                <h1 id="calcheader">Calculator</h1>
+                <button id="calculatorbutton"></button>
             </li>
-            <li>
-                <button id="journalbutton">
-                    <img id="calcimg" src="notes.png">
-                </button>
+            <li style="display: flex; align-items: center;">
+                <h1 id="notesheader">Notes</h1>
+                <button id="journalbutton"></button>
             </li>
         </ul>
     </div>
-    <button id="startbutton"><img id="startbutton" src="start.png" alt="start button"></button>
+    <button id="startbutton" onclick="myFunction()"><img id="startbutton" src="start.png" alt="start button"></button>
     <canvas id="bar"></canvas>
 </footer>
+<script>
+    let toggle = false 
+function myFunction() {
+    if (toggle == false) {
+        toggle = true;
+        document.getElementById("start").style.bottom = "4vh";
+    } else {
+        toggle = false;
+    document.getElementById("start").style.bottom = "-41vh";
+    }
+}
+</script>
