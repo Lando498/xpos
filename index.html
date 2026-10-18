@@ -4,18 +4,14 @@
 </head>
 <body>
 <div id="calculator" class="draggable">
-<div id="calctopbar">
-<button class="close" onclick="calctoggle()">X</button>
-<button class="maximise">□</button>
+<div id="calctopbar" style="background-image: url(zunbar.png);">
+<button class="close" onclick="calctoggle()" style="background-color: #d8690e;">X</button>
 </div>
-<div class="resize"></div>
 </div>
-<div id="journal" class="draggable">
-<div id="journaltopbar">
-<button class="close" onclick="notestoggle()">X</button>
-<button class="maximise">□</button>
+<div id="journal" class="draggable" >
+<div id="journaltopbar" style="background-image: url(zunbar.png);">
+<button class="close" onclick="notestoggle()" style="background-color: #d8690e;">X</button>
 </div>
-<div class="resize"></div>
 </div>
 </body>
 <footer style="display: flex; align-items: center;">
@@ -31,13 +27,16 @@
             </li>
         </ul>
     </div>
+
     <button id="startbutton" onclick="starttoggle()"><img id="startbutton" src="start.png" alt="start button"></button>
-    <canvas id="bar"></canvas>
+    <canvas id="bar">
+    </canvas>
 </footer>
 <script>
+    var clockElement = document.getElementById( "clock" );
     let togglestart = false 
-    let togglecalc = false
-    let togglenotes = false
+    let togglecalc = true
+    let togglenotes = true
 function starttoggle() {
     if (togglestart == false) {
         togglestart = true;
@@ -53,7 +52,7 @@ function calctoggle() {
         document.getElementById("calculator").style.display = "none";
     } else {
         togglecalc = false;
-    document.getElementById("calculator").style.display = "flex";
+    document.getElementById("calculator").style.display = "block";
     }
 }
 function notestoggle() {
@@ -62,7 +61,7 @@ function notestoggle() {
         document.getElementById("journal").style.display = "none";
     } else {
         togglenotes = false;
-    document.getElementById("journal").style.display = "flex";
+    document.getElementById("journal").style.display = "block";
     }
 }
 const dragElements = document.querySelectorAll(".draggable"); 
@@ -84,5 +83,4 @@ const dragElements = document.querySelectorAll(".draggable");
                 }, { once: true });
             });
         });
-
 </script>

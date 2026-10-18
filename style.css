@@ -58,22 +58,16 @@ color: white;
 }
 
 #calculator {
-     position: absolute;
+    display: none;
+position: absolute;
 height: 300px;
 width: 400px;
 background-color: red;
 }
 #journal {
-    position: absolute;
+    display: none;
+position: absolute;
 height: 300px;
 width: 400px;
 background-color: blue;
-}
-.resize {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    height: 30px;
-    width: 30px;
-    cursor: se-resize;
 }
