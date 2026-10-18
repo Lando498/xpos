@@ -1,0 +1,32 @@
+body {
+    overflow: hidden;
+}
+
+#startbutton {
+position: absolute;
+left: 0;
+bottom: 0;
+height: 4vh;
+z-index: 100;
+background-color: rgba(0, 0, 0, 0);
+cursor: pointer;
+}
+#bar {
+bottom: 0;
+position: absolute;
+height: 4vh;
+background-image: url(zunbar.png);
+background-size: contain;
+width: 100%;
+}
+ul {
+    list-style-type: none;
+}
+#calculatorbutton {
+    height: 3vh;
+    width: 3vh;
+}
+#journalbutton {
+    height: 3vh;
+    width: 4vh;
+}
