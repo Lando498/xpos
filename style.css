@@ -71,3 +71,9 @@ height: 300px;
 width: 400px;
 background-color: blue;
 }
+#textarea {
+    resize: none;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
